@@ -1,0 +1,17 @@
+/*
+Most comfortable and good solution for the problem contains duplicate. Used unordered map to get the perfect count of number of times each digit is repeating
+*/
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        unordered_map<int,int> um;
+        for(auto i:nums){
+            if(++um[i]>1)
+                return true;
+            
+        }
+
+        return false;   
+    }
+
+};
